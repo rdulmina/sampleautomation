@@ -1,0 +1,3 @@
+[workspace]
+title = "SampleAutomation"
+packages = ["weatherupdate"]

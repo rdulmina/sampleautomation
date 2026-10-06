@@ -1,0 +1,9 @@
+[package]
+org = "dulminakodagoda"
+name = "weatherupdate"
+version = "0.1.0"
+distribution = "2201.14.0"
+title = "WeatherUpdate"
+
+[build-options]
+sticky = true
