@@ -1,9 +1,10 @@
-import ballerina/io;
+import ballerina/http;
 import ballerina/os;
 
-public function main() {
-    map<string> environmentVariables = os:listEnv();
-    foreach [string, string] [variableName, variableValue] in environmentVariables.entries() {
-        io:println(variableName, " = ", variableValue);
+service / on new http:Listener(8080) {
+
+    resource function get envVariables() returns map<string> {
+        map<string> environmentVariables = os:listEnv();
+        return environmentVariables;
     }
 }
